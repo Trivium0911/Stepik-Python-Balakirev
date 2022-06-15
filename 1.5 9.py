@@ -91,3 +91,4 @@ class GamePole:
 
 pole_game = GamePole(10, 12)
 pole_game.count_around_mines()
+print(pole_game.show())
