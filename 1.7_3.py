@@ -24,11 +24,15 @@ P.S. В программе только объявить класс. На экр
 """
 
 from string import ascii_uppercase, digits
+
+
 class CardCheck:
     CHARS_FOR_NAME = ascii_uppercase + digits + " "
+
     @staticmethod
     def check_card_number(number):
         return all([i in digits for i in number.replace("-", '')])
+
     @classmethod
     def check_name(cls, name):
         return all([i in cls.CHARS_FOR_NAME for i in name]) and len(name.split()) == 2
