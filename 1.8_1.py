@@ -125,6 +125,8 @@ class Router:
         for server in cls.list_servers:
             server.buffer.extend([data for data in cls.buffer if data.ip == server.ip])
         cls.buffer.clear()
+
+
 router = Router()
 sv_from = Server()
 router.link(sv_from)
