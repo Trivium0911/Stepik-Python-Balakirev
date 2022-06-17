@@ -27,24 +27,34 @@ P.S. В программе нужно только объявить классы
 
 """
 
-class AppStore:
-    apps = []
 
-    def add_application(self, app):
-        self.apps.append(app)
+class Viber:
+    msges = []
 
-    def remove_application(self, app):
-        self.apps.remove(app)
+    @classmethod
+    def add_message(cls, msg):
+        cls.msges.append(msg)
 
-    def block_application(self, app):
-        self.apps[self.apps.index(app)].blocked = True
+    @classmethod
+    def remove_message(cls, msg):
+        cls.msges.remove(msg)
 
-    def total_apps(self):
-        return len(self.apps)
+    @classmethod
+    def set_like(cls, msg):
+        cls.msges[cls.msges.index(msg)].fl_like = True
+
+    @classmethod
+    def show_last_message(cls, num):
+        print(cls.msges[-num:])
+
+    @classmethod
+    def total_messages(cls):
+        return len(cls.msges)
 
 
-class Application:
-    def __init__(self, name, blocked=False):
-        self.name = name
-        self.blocked = blocked
+class Message:
+    def __init__(self, text, fl_like=False):
+        self.text = text
+        self.fl_like = fl_like
+
 
