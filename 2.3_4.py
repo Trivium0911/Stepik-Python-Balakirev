@@ -57,7 +57,7 @@ class Bag:
         return self.__things
 
     def add_thing(self, thing):
-        if sum([i.weight for i in self.__things]) + thing.weight <= self.max_weight:
+        if self.get_total_weight() + thing.weight <= self.max_weight:
             self.__things.append(thing)
 
     def remove_thing(self, indx):
