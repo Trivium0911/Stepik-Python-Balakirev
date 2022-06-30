@@ -88,9 +88,6 @@ class TVProgram:
         self.items = [i for i in self.items if i.uid != indx]
 
 
-
-
-
 pr = TVProgram("Первый канал")
 pr.add_telecast(Telecast(1, "Доброе утро", 10000))
 pr.add_telecast(Telecast(2, "Новости", 2000))
