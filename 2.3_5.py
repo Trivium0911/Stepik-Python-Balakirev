@@ -45,6 +45,7 @@ for t in pr.items:
 P.S. В программе требуется объявить классы с описанным функционалом. На экран в программе выводить ничего не нужно.
 """
 
+
 class Telecast:
     def __init__(self, id, name, duration):
         self.__id = id
