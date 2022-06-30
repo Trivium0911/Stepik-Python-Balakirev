@@ -66,6 +66,7 @@ class Bag:
     def get_total_weight(self):
         return sum([i.weight for i in self.__things])
 
+
 class Thing:
 
     def __init__(self, name, weight):
