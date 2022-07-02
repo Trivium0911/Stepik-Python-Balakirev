@@ -69,9 +69,9 @@ class Circle:
         self.__radius = val
 
     def __setattr__(self, key, value):
-        if key in self.attrs or type(value) not in self.attrs[key]:
+        if key in self.attrs and type(value) not in self.attrs[key]:
             raise TypeError("Неверный тип присваиваемых данных.")
-        elif key == "radius" and value <= 0:
+        if key == "radius" and value <= 0:
             return
         super().__setattr__(key, value)
 
