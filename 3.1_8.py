@@ -83,3 +83,4 @@ circle = Circle(10.5, 7, 22)
 circle.radius = -10 # прежнее значение не должно меняться, т.к. отрицательный радиус недопустим
 x, y = circle.x, circle.y
 res = circle.name
+
