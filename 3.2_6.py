@@ -27,7 +27,6 @@ lst = ["Пункт меню 1", "Пункт меню 2", "Пункт меню 3"
 render = RenderList("ol")
 html = render(lst)
 P.S. На экран ничего выводить не нужно.
-
 """
 
 
@@ -45,5 +44,6 @@ class RenderList:
 lst = ["Пункт меню 1", "Пункт меню 2", "Пункт меню 3"]
 render = RenderList("ol")
 html = render(lst)
-html = render(lst) # возвращается многострочная строка с соответствующей HTML-разметкой
+html = render(lst)  # возвращается многострочная строка с соответствующей HTML-разметкой
 print(html)
+
