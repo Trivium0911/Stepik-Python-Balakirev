@@ -45,8 +45,6 @@ class Handler:
         def wrapper(request, *args, **kwargs):
             # здесь нужные строчки
         return wrapper
-
-
 """
 
 
