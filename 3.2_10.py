@@ -59,7 +59,7 @@ class RenderDigit:
     def __call__(self, inp, *args, **kwargs):
         try:
             return int(inp)
-        except:
+        except ValueError:
             return None
 
 
