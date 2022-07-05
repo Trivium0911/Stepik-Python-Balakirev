@@ -50,7 +50,7 @@ class InputValues:
 
     def __call__(self, func):
         def wrapper(*args, **kwargs):
-            return list(map(self.render, func(*args, **kwargs).split()))
+            return [self.render(i) for i in func(*args, **kwargs).split()]
 
         return wrapper
 
