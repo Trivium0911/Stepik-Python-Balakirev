@@ -46,7 +46,6 @@ class Model:
         return res[:-1]
 
 
-
 model = Model()
 model.query(id=1, fio='Sergey', old=33)
 print(model)
