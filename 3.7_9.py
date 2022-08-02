@@ -63,7 +63,7 @@ class Vector:
             self.lst = [i + other for i in self.lst]
             return self
         if isinstance(other, Vector):
-            if len(self.lst) == len(other.lst):
+            if self._checker(other):
                 self.lst = [self.lst[i] + other.lst[i] for i in range(len(self.lst))]
         return self
 
@@ -72,7 +72,7 @@ class Vector:
             self.lst = [i - other for i in self.lst]
             return self
         if isinstance(other, Vector):
-            if len(self.lst) == len(other.lst):
+            if self._checker(other):
                 self.lst = [self.lst[i] - other.lst[i] for i in range(len(self.lst))]
         return self
 
