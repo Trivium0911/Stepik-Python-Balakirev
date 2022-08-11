@@ -52,7 +52,6 @@ class Record:
         self.__check_indx(key)
         setattr(self, self.__keys[key], value)
 
-
 r = Record(pk=1, title='Python ООП', author='Балакирев')
 r.pk # 1
 r.title # Python ООП
