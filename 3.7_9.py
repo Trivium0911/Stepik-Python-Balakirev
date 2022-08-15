@@ -36,27 +36,27 @@ class Vector:
             [self.lst.append(i) for i in args]
 
     def _checker(self, it):
-        if len(self.lst) != len(it.lst):
+        if len(self.lst) != len(it.coords):
             raise ArithmeticError('размерности векторов не совпадают')
         return True
 
     def __add__(self, it):
         if self._checker(it):
-            return Vector(*[self.lst[i] + it.lst[i] for i in range(len(self.lst))])
+            return Vector(*[self.lst[i] + it.coords[i] for i in range(len(self.lst))])
 
     def __radd__(self, it):
         return self.__add__(it)
 
     def __sub__(self, it):
         if self._checker(it):
-            return Vector(*[self.lst[i] - it.lst[i] for i in range(len(self.lst))])
+            return Vector(*[self.lst[i] - it.coords[i] for i in range(len(self.lst))])
 
     def __rsub__(self, it):
         return self.__sub__(it)
 
     def __mul__(self, it):
         if self._checker(it):
-            return Vector(*[self.lst[i] * it.lst[i] for i in range(len(self.lst))])
+            return Vector(*[self.lst[i] * it.coords[i] for i in range(len(self.lst))])
 
     def __iadd__(self, other):
         if type(other) in (int, float):
@@ -77,7 +77,7 @@ class Vector:
         return self
 
     def __eq__(self, other):
-        return self.lst == other.lst
+        return self.lst == other.coords
 
 
 v1 = Vector(1, 2, 3)
