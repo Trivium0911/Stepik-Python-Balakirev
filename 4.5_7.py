@@ -97,6 +97,7 @@ class Stack(StackInterface):
         p_last.next = None
         return last
 
+
 st = Stack()
 st.push_back(StackObj("obj 1"))
 obj = StackObj("obj 2")
