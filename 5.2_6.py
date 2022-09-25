@@ -23,14 +23,8 @@ P.S. В программе нужно объявить только функци
 
 
 def get_loss(w1, w2, w3, w4):
-    y = 0
     try:
-        y = 10 * w1 // w2 - 5 * w2 * w3 + w4
-
+        return 10 * w1 // w2 - 5 * w2 * w3 + w4
     except ZeroDivisionError:
         return "деление на ноль"
-    else:
-        y = 10 * w1 // w2 - 5 * w2 * w3 + w4
-    return y
-
 
