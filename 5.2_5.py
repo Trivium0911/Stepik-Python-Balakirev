@@ -37,14 +37,26 @@ class Point:
         self._x = x
         self._y = y
 
+    @property
+    def x(self):
+        return self._x
+
+    @property
+    def y(self):
+        return self._y
+
     def __str__(self):
         return f"Point: x = {self._x}, y = {self._y}"
 
 
-n, m = input().split()
+input_data = input().split()
 try:
-    pt = Point(int(n), int(m))
-except:
+    try:
+        n, m = map(int, input_data)
+    except ValueError:
+        n, m = map(float, input_data)
+    pt = Point(n, m)
+except ValueError:
     pt = Point()
 finally:
-    print(pt)
+    print(f"Point: x = {pt.x}, y = {pt.y}")
